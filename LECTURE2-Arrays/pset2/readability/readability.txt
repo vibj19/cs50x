@@ -1,0 +1,14 @@
+1000 letters with 100 words; L= 1000 per100
+1000 letters with 50 words;  L= 2000 per100
+1000 letters with 200 words; L= 500 per100
+
+L= (letters*100)/words
+
+
+
+5 sentences with 100 words; S= 5 per100
+1 setence with 10 words; S= 10 per100
+200 sentences with 500 words; 40 per100
+
+
+S = sentences*100/words

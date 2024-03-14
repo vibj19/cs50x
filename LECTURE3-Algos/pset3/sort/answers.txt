@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Performs worse on bigger datasets with random numbers, but good time for sorted set
+
+sort2 uses: Merge Sort
+
+How do you know?: Fastest throughout all databases
+
+sort3 uses: Selection Sort
+
+How do you know?: Good for smaller datasets but slowest on all the largest ones
