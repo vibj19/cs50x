@@ -1,0 +1,7 @@
+Average Energy: 0.65906
+Average Valence: 0.484443
+Aveage danceability: 0.71646
+
+The listener likes songs with high energy and high danceability. Their audio aura is Orange.
+
+Need to take more factors into account than just the average energy, valence and danceability
