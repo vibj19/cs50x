@@ -4,6 +4,6 @@ This is CS50, Harvard University's introduction to the intellectual enterprises 
 
 This reposititory contains demos from all the lectures and associated problem sets on C, Python, SQL, HTML, CSS, JavaScript, and Flask. 
 
-Disclaimer: [Academic Honesty Policy](https://cs50.harvard.edu/x/2022/honesty/)
+**Disclaimer**: [Academic Honesty Policy](https://cs50.harvard.edu/x/2022/honesty/)
 
 https://cs50.harvard.edu/x/2024/
