@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Stock Name" type="text"> <br>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Number of Shares" type="INT" min = "1">
+        </div>
+        <button class="btn btn-primary" name="search" value="search" type="submit"> Search </button>
+    </form>
+    {% if stock %}
+        <div>
+        <br>
+        <br>
+        <h2>
+            <table style="margin-left: auto; margin-right: auto;" cellspacing="10" cellpadding="20">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{ stock.symbol }} </td>
+                        <td> {{ stock.price }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </h2>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    <br>
+    <div style="margin-left: auto; margin-right: auto;">
+    <h3> Total Cost
+    {% endif %}
+    <br>
+    {{ cost }}
+    </h3>
+    </div>
+    <div style="margin-left: auto; margin-right: auto;">
+    {% if cost %}
+        <h3> Balance
+        <br>
+        {{ balance }}
+        </h3>
+        </div>
+    {% endif %}
+    {% if balance %}
+    <form action="/buy" method = "post">
+    <button class="btn btn-primary" name="buy" value="buy" type="submit"> Buy </button>
+    </form>
+    {% endif %}
+{% endblock %}

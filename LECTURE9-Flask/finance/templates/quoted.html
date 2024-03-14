@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <form action="/quoted" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Stock Name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit"> Search </button>
+    </form>
+    {% if stock %}
+        <div>
+        <br>
+        <br>
+        <h2>
+            <table style="margin-left: auto; margin-right: auto;" cellspacing="10" cellpadding="20">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{ stock.symbol }} </td>
+                        <td> {{ stock.price }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </h2>
+        </div>
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    {% endif %}
+{% endblock %}
